@@ -17,8 +17,8 @@
     background: url('https://i.pinimg.com/originals/22/a5/a7/22a5a7b9dbc0e29ccef006dea5981367.png');
     background-size: cover;
    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    
+    
 }
 
 .login-container {
@@ -125,25 +125,37 @@
     <div class="login-container">
         <div class="login-box">
             <h2>Register</h2>
-            <form action="register" method="post">
+            <form action="studentregister" method="post">
             <div class="textbox">
                     <label>Name</label>
-                    <input type="text" placeholder="Enter your name" required name="name" >
+                    <input type="text" placeholder="Enter marks" required name="name" >
                 </div>
                 
                 <div class="textbox">
-                    <label>Email</label>
-                    <input type="email" placeholder="Enter your email" required name="email" >
+                    <label>telugu</label>
+                    <input type="text" placeholder="Enter marks" required name="telugu" >
                 </div>
                 <div class="textbox">
-                 <label>Confirm password</label>
-                    <input type="password" placeholder="Enter your password" required name="password" >
-                    
+                    <label>english</label>
+                    <input type="text" placeholder="Enter marks" required name="english" >
                 </div>
-                 <div class="textbox">
-                 <label>Confirm password</label>
-                    <input type="password" placeholder="Enter your confirmpassword" required name="confirmpassword" >
+                <div class="textbox">
+                    <label>hindi</label>
+                    <input type="text" placeholder="Enter marks" required name="hindi" >
                 </div>
+                <div class="textbox">
+                    <label>maths</label>
+                    <input type="text" placeholder="Enter marks" required name="maths" >
+                </div>
+                <div class="textbox">
+                    <label>science</label>
+                    <input type="text" placeholder="Enter marks" required name="science" >
+                </div>
+                <div class="textbox">
+                    <label>social</label>
+                    <input type="text" placeholder="Enter marks" required name="social" >
+                </div>
+               
                
                <a href="welcome.jsp"> <button type="submit" class="btn">Register</button></a>
                

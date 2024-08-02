@@ -1,3 +1,5 @@
+<%@page import="modals.studentmarks"%>
+<%@page import="services.studentmarkservice"%>
 <%@page import="modals.login"%>
 <%@page import="java.util.List"%>
 <%@page import="dbconnections.logindb"%>
@@ -55,33 +57,39 @@ h1{
 			<tr>
 				<td>Id</td>
 				<td>Name</td>
-				<td>Email</td>
-				<td>Password</td>
-				<td>Confirm password</td>
-				<td>update</td>
-				<td>Deletebyid</td>
-				<td>Deletebyemail</td>
+				<td>Telugu</td>
+				<td>English</td>
+				<td>Hindi</td>
+				<td>Maths</td>
+				<td>Science</td>
+				<td>Social</td>
+				<td> update</td>
+				<td> Delete</td>
 			</tr>
 		</thead>
 
 
 		<tbody>
 			<%
-			loginservice service = new loginservice(logindb.getconnection());
-			List<login> l = service.getall();
-			for (login s : l) {
+			studentmarkservice service = new studentmarkservice(logindb.getconnection());
+			List<studentmarks> l = service.getall();
+			for (studentmarks s : l) {
 			%>
 			<tr>
 				<td><%=s.getId()%></td>
 				<td><%=s.getName()%></td>
-				<td><%=s.getEmail()%></td>
-				<td><%=s.getPassword()%></td>
-				<td><%=s.getConfirmpassword()%></td>
+				<td><%=s.getTelugu()%></td>
+				<td><%=s.getEnglish()%></td>
+				<td><%=s.getHindi()%></td>
+				<td><%=s.getMaths()%></td>
+				<td><%=s.getScience()%></td>
+				<td><%=s.getSocial()%></td>
+				
 				<td>
 					<button class="btn btn-outline-primary">update</button>
 				</td>
-				<td><a href="delete?id=<%=s.getId()%>"><button class="btn btn-outline-danger">deletebyid</button></a></td>
-				<td><a href="deletebyemail?email=<%=s.getEmail()%>"><button class="btn btn-outline-info" >deletebyemail</button></a></td>
+				<td><a href="deletebyid?id=<%=s.getId()%>"><button class="btn btn-outline-danger">delete</button></a></td>
+				
 			</tr>
 
 			<%
