@@ -1,0 +1,1 @@
+The Student Management System is a web-based application built with JSP, Servlets, JDBC, and MySQL. It allows administrators to manage student data, courses, and batches, while providing students with access to their profiles and grades. The system ensures efficient data handling, secure access, and streamlined administrative processes.
